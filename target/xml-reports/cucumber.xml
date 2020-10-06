@@ -1,40 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.337">
-<testcase classname="NCL navigate page" name="User filters cruises by destination and price" time="32.945">
-<failure message="element click intercepted: Element &lt;span class=&quot;e52_text&quot;&gt;...&lt;/span&gt; is not clickable at point (1307, 279). Other element would receive the click: &lt;section id=&quot;bootstrap_modal&quot; class=&quot;modal fade modal-leads show&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;modal&quot; style=&quot;display: block;&quot;&gt;...&lt;/section&gt;&#10;  (Session info: chrome=85.0.4183.121)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'apples-MacBook-Air.local', ip: 'fe80:0:0:0:3:ea66:f9e0:e927%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '1.8.0_251'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/k8/hg4cbk3x6dl...}, goog:chromeOptions: {debuggerAddress: localhost:49794}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 13917c66042f1d8bd1840ea7a4e01ed2" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given User navigates to ncl.com.............................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="117.776">
+<testcase classname="NCL navigate page" name="User filters cruises by destination and price" time="117.226">
+<system-out><![CDATA[Given User navigates to ncl.com.............................................passed
 Given User searches for "Hawaii Cruises"....................................passed
-And User filters result by price range from $0 to $1500.....................failed
-When the filter gets applied................................................skipped
-Then the price of displayed cruises should be within the range..............skipped
-
-StackTrace:
-org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <span class="e52_text">...</span> is not clickable at point (1307, 279). Other element would receive the click: <section id="bootstrap_modal" class="modal fade modal-leads show" tabindex="-1" role="dialog" aria-labelledby="modal" style="display: block;">...</section>
-  (Session info: chrome=85.0.4183.121)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'apples-MacBook-Air.local', ip: 'fe80:0:0:0:3:ea66:f9e0:e927%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.5', java.version: '1.8.0_251'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/k8/hg4cbk3x6dl...}, goog:chromeOptions: {debuggerAddress: localhost:49794}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 13917c66042f1d8bd1840ea7a4e01ed2
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy17.click(Unknown Source)
-	at stepdefinitions.NCLFilterStepdefinition.user_filters_result_by_price_range_from_$0_to_$1500(NCLFilterStepdefinition.java:15)
-	at ✽.User filters result by price range from $0 to $1500(file:///Users/apple/IdeaProjects/com.ncl/src/test/resources/features/NCLFiltering.feature:9)
-]]></failure>
+And User filters result by price range from $0 to $1500.....................passed
+When the filter gets applied................................................passed
+Then the price of displayed cruises should be within the range..............passed
+]]></system-out>
 </testcase>
 </testsuite>

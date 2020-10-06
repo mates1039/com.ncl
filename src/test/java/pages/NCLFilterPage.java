@@ -33,6 +33,10 @@ public WebElement popupSubmit;
     @FindBy(xpath = "//span[@class='headline-1 -variant-3']")
     public List<WebElement> listOfPrices;
 
+    @FindBy(xpath = "//a[@title='More Filters']")
+    public WebElement moreFiltersTextArea;
+
+
 
 }
 

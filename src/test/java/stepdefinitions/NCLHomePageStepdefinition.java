@@ -2,6 +2,8 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
 import pages.NCLFilterPage;
 import pages.NCLHomePage;
 import utilities.Driver;
@@ -19,7 +21,7 @@ public class NCLHomePageStepdefinition extends TestBase {
 
 
     @Given("User searches for {string}")
-    public void user_searches_for(String string) {
+    public void user_searches_for(String string)  {
         nclHomePage.destinationDropDown.click();
         nclHomePage.searchDestinationBox.sendKeys(string);
         nclHomePage.hawaiiRadioButton.click();
@@ -28,8 +30,17 @@ public class NCLHomePageStepdefinition extends TestBase {
 
         TestBase.waitForPageToLoad(20);
 
+        try{
+            Driver.getDriver().switchTo().alert().dismiss();
+
+        } catch(NoAlertPresentException e){}
+
+        if (Driver.getDriver().findElement(By.id("simplemodal-close-img")).isDisplayed()){
+            Driver.getDriver().findElement(By.id("simplemodal-close-img")).click();
+        }
+
         try {
-            TestBase.waitForClickability(filterPage.popupSubmit,20);
+            TestBase.waitForVisibility(filterPage.popupSubmit,20);
             Alert alert= Driver.getDriver().switchTo().alert();
             alert.dismiss();
         }catch (Exception e){
