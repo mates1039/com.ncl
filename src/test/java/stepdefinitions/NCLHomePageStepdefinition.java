@@ -29,7 +29,7 @@ public class NCLHomePageStepdefinition extends TestBase {
         TestBase.waitForPageToLoad(20);
 
         try {
-            TestBase.waitForClickablility(filterPage.popupSubmit,20);
+            TestBase.waitForClickability(filterPage.popupSubmit,20);
             Alert alert= Driver.getDriver().switchTo().alert();
             alert.dismiss();
         }catch (Exception e){

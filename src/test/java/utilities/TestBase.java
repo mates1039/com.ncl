@@ -51,7 +51,7 @@ public class TestBase {
         FileUtils.copyFile(source, finalDestination);
         return target;
     }
-    //========Switching Window=====//
+
     public static void switchToWindow(String targetTitle) {
         String origin = Driver.getDriver().getWindowHandle();
         for (String handle : Driver.getDriver().getWindowHandles()) {
@@ -62,12 +62,12 @@ public class TestBase {
         }
         Driver.getDriver().switchTo().window(origin);
     }
-    //========Hover Over=====//
+
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
     }
-    //==========Return a list of string given a list of Web Element====////
+
     public static List<String> getElementsText(List<WebElement> list) {
         List<String> elemTexts = new ArrayList<>();
         for (WebElement el : list) {
@@ -77,7 +77,7 @@ public class TestBase {
         }
         return elemTexts;
     }
-    //========Returns the Text of the element given an element locator==//
+
     public static List<String> getElementsText(By locator) {
         List<WebElement> elems = Driver.getDriver().findElements(locator);
         List<String> elemTexts = new ArrayList<>();
@@ -88,7 +88,7 @@ public class TestBase {
         }
         return elemTexts;
     }
-    //===============Explicit Wait==============//
+
     public static void waitFor(int sec) {
         try {
             Thread.sleep(sec * 1000);
@@ -104,11 +104,11 @@ public class TestBase {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-    public static WebElement waitForClickablility(WebElement element, int timeout) {
+    public static WebElement waitForClickability(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
-    public static WebElement waitForClickablility(By locator, int timeout) {
+    public static WebElement waitForClickability(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), timeout);
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
@@ -127,7 +127,7 @@ public class TestBase {
                     "Timeout waiting for Page Load Request to complete after " + timeOutInSeconds + " seconds");
         }
     }
-    //======Fluent Wait====//
+
     public static WebElement fluentWait(final WebElement webElement, int timeinsec) {
         FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
                 .withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS)

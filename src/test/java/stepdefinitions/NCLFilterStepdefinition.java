@@ -12,7 +12,7 @@ public class NCLFilterStepdefinition extends TestBase {
 
     @Given("User filters result by price range from $0 to $1500")
     public void user_filters_result_by_price_range_from_$0_to_$1500() {
-filterPage.moreFiltersButton.click();
+        filterPage.moreFiltersButton.click();
 //dismissAlert();
         filterPage.lowestPrice.sendKeys("0");
         filterPage.highestPrice.sendKeys("1500");

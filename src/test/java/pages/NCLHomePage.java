@@ -13,13 +13,12 @@ public class NCLHomePage {
     }
 
 
-    @FindBy(xpath = "//div[@data-code='destination']") ////div[@data-code='destination']
+    @FindBy(xpath = "//div[@data-code='destination']")
     public WebElement destinationDropDown;
 
     @FindBy(xpath = "//input[starts-with(@placeholder, 'Find a Des')]")
     public WebElement searchDestinationBox;
 
-    //@FindBy (xpath = "//input[@id='c80_checkboxHAWAII']")//#c80_checkboxHAWAII
     @FindBy(xpath= "//span[contains(text(),'Hawaii Cruises')]") //
     public WebElement hawaiiRadioButton;
 
@@ -31,7 +30,7 @@ public class NCLHomePage {
 
     @FindBy(css = "#simplemodal-close-img")
     public WebElement alertDismiss;
-// //*[Aclass='featured']//*[text()='Testing']   //a[starts-with(@href, "mylink")]
+
 
    public void navigateToHomePage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("ncl_url"));
