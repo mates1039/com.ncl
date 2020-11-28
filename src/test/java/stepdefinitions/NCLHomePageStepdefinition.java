@@ -46,7 +46,7 @@ public class NCLHomePageStepdefinition extends TestBase {
         }catch (Exception e){
             e.printStackTrace();
         }
-
+        System.out.println("Murat");
 
     }
 }
