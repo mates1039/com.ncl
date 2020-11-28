@@ -15,12 +15,13 @@ public class NCLFilterStepdefinition extends TestBase {
     @Given("User filters result by price range from $0 to $1500")
     public void user_filters_result_by_price_range_from_$0_to_$1500() {
         filterPage.moreFiltersButton.click();
-
         filterPage.lowestPrice.sendKeys("1"); //bug
         filterPage.highestPrice.sendKeys("1500");
         filterPage.applyButton.click();
 
     }
+
+
 
     @When("the filter gets applied")
     public void the_filter_gets_applied() {

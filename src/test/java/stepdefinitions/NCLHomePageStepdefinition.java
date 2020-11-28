@@ -1,7 +1,6 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import pages.NCLFilterPage;
@@ -17,6 +16,8 @@ public class NCLHomePageStepdefinition extends TestBase {
     @Given("User navigates to ncl.com")
     public void user_navigates_to_ncl_com() {
         nclHomePage.navigateToHomePage();
+        System.out.println();
+        System.out.println("2nd change");
     }
 
 
@@ -24,7 +25,7 @@ public class NCLHomePageStepdefinition extends TestBase {
     public void user_searches_for(String string)  {
         nclHomePage.destinationDropDown.click();
         nclHomePage.searchDestinationBox.sendKeys(string);
-        nclHomePage.hawaiiRadioButton.click();
+        nclHomePage.hawaiiCruise.click();
         nclHomePage.applyButton.click();
         nclHomePage.findCruiseButton.click();
 
@@ -39,13 +40,6 @@ public class NCLHomePageStepdefinition extends TestBase {
             Driver.getDriver().findElement(By.id("simplemodal-close-img")).click();
         }
 
-        try {
-            TestBase.waitForVisibility(filterPage.popupSubmit,20);
-            Alert alert= Driver.getDriver().switchTo().alert();
-            alert.dismiss();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
 
 
     }
