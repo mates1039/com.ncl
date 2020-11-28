@@ -17,6 +17,7 @@ public class NCLHomePageStepdefinition extends TestBase {
     public void user_navigates_to_ncl_com() {
         nclHomePage.navigateToHomePage();
         System.out.println();
+        System.out.println("2nd change");
     }
 
 
