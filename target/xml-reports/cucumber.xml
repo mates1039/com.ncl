@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="117.776">
-<testcase classname="NCL navigate page" name="User filters cruises by destination and price" time="117.226">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="32.433">
+<testcase classname="NCL navigate page" name="User filters cruises by destination and price" time="32.102">
 <system-out><![CDATA[Given User navigates to ncl.com.............................................passed
 Given User searches for "Hawaii Cruises"....................................passed
 And User filters result by price range from $0 to $1500.....................passed

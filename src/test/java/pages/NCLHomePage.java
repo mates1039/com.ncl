@@ -20,7 +20,7 @@ public class NCLHomePage {
     public WebElement searchDestinationBox;
 
     @FindBy(xpath= "//span[contains(text(),'Hawaii Cruises')]") //
-    public WebElement hawaiiRadioButton;
+    public WebElement hawaiiCruise;
 
     @FindBy (xpath = "//a[@title='Apply' and @class='link-2']")
     public WebElement applyButton;
